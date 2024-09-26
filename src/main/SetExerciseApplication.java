@@ -2,6 +2,7 @@ package main;
 
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class SetExerciseApplication {
@@ -30,6 +31,8 @@ public class SetExerciseApplication {
 		System.out.println("-------");
 		printToConsole(copyOfNewPokerHands);
 			// remove ACE HIGH and QUEEN HIGH
+		updateElement(copyOfNewPokerHands);
+		printToConsole(copyOfNewPokerHands);
 		
 	}
 
@@ -59,7 +62,27 @@ for(String hand:copyOfNewPokerHands) {
 		
 	}
 
-public void updateElement(Set<String>copyOfNewPokerHands) {
+public static void updateElement(Set<String>copyOfNewPokerHands) {
 	
-}
+	
+	Iterator<String> iterator=copyOfNewPokerHands.iterator();
+	String newHand= "DEUCES";
+	String originalHand="PAIR";
+	System.out.println("Running");
+	
+	
+	while(iterator.hasNext()) {
+	String hand=iterator.next();
+	if(hand.equals(originalHand)) {
+		System.out.println("found it");
+		iterator.remove();
+	
+	
+		
+	}  
+	
+	}
+	
+	copyOfNewPokerHands.add(newHand);}
+
 }
